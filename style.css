@@ -28,9 +28,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
@@ -69,11 +71,104 @@ img{
 }
 
 /* .layout. */
-.nav{display: flex;}
+.header{
+    background: #000;
+    color:#D1D1D1;
+    padding: 40px 0;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* .component. */
+.btn{
+    padding: 12px 24px;
+    border-radius: 32px;
+}
+.btn-light{
+    background: white;
+    color: #000;
+}
+.btn-dark{
+    background: #D1D1D1;
+    color: white;
+}
 
 /* .page. */
+.banner{
+    background: black;
+    color: white;
+}
+
+.banner-title-strong{
+    display: block;
+    text-align: right;
+}
+
+.intro{
+    background-image: url(/img/background-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 160px 0;
+}
+.intro-desc{
+    width: 526px;
+}
+
+.about{
+    padding: 160px 0;
+}
+.about-list li{
+    width: 48%;
+}
+
+.about-list{
+    width: 630px;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap:24px;
+}
+.about-list li{
+    width: calc(50% - 12px);
+    box-shadow: 4px 4px 4px 0 rgb(0,0, 0,0.08);
+}
+
+.about-desc{
+    width: 526px;
+}
+
+.contact{
+    padding: 96px 0;
+    background: linear-gradient(rgba(5, 0, 20, 1),rgba(1, 2, 30, 0.89));
+}
+
+.social-link{
+    border-radius: 40px;
+    margin-right: 20px;
+}
+.social-link:hover{
+    box-shadow: 0px 0px 16px 3px rgba(144, 148, 255, 0.9);
+    transition: 0.2s;
+}
+
+.project{
+    padding: 16px 0;
+}
+.project-title{
+    width: 746px;
+    margin-left: auto;
+}
+
+.nav-c{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
 
 /* .utils. */
 .container{
@@ -101,5 +196,42 @@ img{
     font-size: 20px;
 }
 
+.d-flex{
+    display: flex;
+}
 
+.align-items-center{
+    align-items: center;
+}
 
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-end{
+    justify-content: end;
+}
+
+.m-r24{
+    margin-right: 24px;
+}
+.m-b24{
+    margin-bottom: 24px;
+}
+.m-b32{
+    margin-bottom: 32px;
+}
+
+.text-primary{
+    color: #00ffa3;
+}
+
+.am{
+    font-size: 64px;
+}
+
+.w5{
+    font-family: Bruno Ace SC;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+}
