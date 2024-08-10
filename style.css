@@ -200,6 +200,11 @@ img{
     display: flex;
 }
 
+.flex-column{
+    flex-direction: row;
+    flex-direction: column;
+}
+
 .align-items-center{
     align-items: center;
 }
@@ -211,6 +216,17 @@ img{
     justify-content: end;
 }
 
+.align-items-start{
+    align-items: start;
+}
+
+.m-b12{
+    margin-bottom: 12px;
+}
+.m-b24{
+    margin-bottom: 24px;
+}
+
 .m-r24{
     margin-right: 24px;
 }
@@ -219,6 +235,10 @@ img{
 }
 .m-b32{
     margin-bottom: 32px;
+}
+
+.gap{
+    gap:24px;
 }
 
 .text-primary{
@@ -234,4 +254,27 @@ img{
     font-size: 24px;
     line-height: 36px;
     text-align: left;
+}
+
+.w6{
+    width: 636px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.w7{
+    display: block;
+    color: white;
+    font-family: Bruno Ace SC;
+    font-size: 16px;
+    line-height: 24px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: center;
+}
+
+footer{
+    background: #000;
 }
