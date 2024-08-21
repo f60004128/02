@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -21,23 +9,19 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-
 ol, ul {
 	list-style: none;
 }
-
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
@@ -45,46 +29,48 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/*-----*/
-
+/* Value */
+:root {
+	--layout-width: 1296px;
+}
+/* Init */
 body{
     font-family: "Bruno Ace SC", sans-serif;
     line-height: 1.5;
 }
-
+/* 基準線 */
 *,*::before,*::after{
     box-sizing: border-box;
-    /* outline: solid 1px;     */
+    /* outline: solid 1px; */
 }
 
+/* 連結清空 */
 a{
     text-decoration: none;
     display: inline-block;
     color: inherit;
 }
-
 img{
     max-width: 100%;
     height: auto;
     vertical-align: middle;
-}
+}  
 
-/* .layout. */
+/* ---------- */
+
+/* layout */
 .header{
     background: #000;
     color:#D1D1D1;
     padding: 40px 0;
 }
-
-
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* .component. */
+/* component */
 .btn{
     padding: 12px 24px;
     border-radius: 32px;
@@ -93,17 +79,16 @@ img{
     background: white;
     color: #000;
 }
-.btn-dark{
-    background: #D1D1D1;
+.btn-light-b{
+    background: #000;
     color: white;
 }
 
-/* .page. */
+/* page */
 .banner{
     background: black;
     color: white;
 }
-
 .banner-title-strong{
     display: block;
     text-align: right;
@@ -123,9 +108,6 @@ img{
 .about{
     padding: 160px 0;
 }
-.about-list li{
-    width: 48%;
-}
 
 .about-list{
     width: 630px;
@@ -134,66 +116,107 @@ img{
     gap:24px;
 }
 .about-list li{
+    /* width: 48%; */
     width: calc(50% - 12px);
-    box-shadow: 4px 4px 4px 0 rgb(0,0, 0,0.08);
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
-
 .about-desc{
     width: 526px;
 }
 
 .contact{
-    padding: 96px 0;
-    background: linear-gradient(rgba(5, 0, 20, 1),rgba(1, 2, 30, 0.89));
+    /* background: linear-gradient(#000, #fff); */
+    color: #fff;
+    background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);
+}
+.con-img{
+    width: 100px;
+}
+.con-icon {
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .social-link{
     border-radius: 40px;
-    margin-right: 20px;
+    transition: 0.5s;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 }
+
 .social-link:hover{
     box-shadow: 0px 0px 16px 3px rgba(144, 148, 255, 0.9);
-    transition: 0.2s;
 }
 
 .project{
-    padding: 16px 0;
+    padding-top: 160px;
+    padding-bottom: 160px;
 }
 .project-title{
     width: 746px;
     margin-left: auto;
 }
 
-.nav-c{
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
+.footer{
+    background: #000;
 }
+.footer_p{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #FFF;
+    text-align: center;
+}
+/* utils */
 
-/* .utils. */
+/* rgba(0, 255, 163, 1) */
 .container{
-    width: 1296px;
+    width: var(--layout-width);
     margin: 0 auto;
 }
-
 .h1{
     font-size: 128px;
 }
-
 .h2{
     font-size: 40px;
 }
-
 .fs-1{
     font-size: 32px;
 }
-
 .fs-2{
     font-size: 24px;
 }
-
 .fs-3{
     font-size: 20px;
+}
+.fs-4{
+    font-size: 16px;
+}
+.Ty{
+    font-size: 64px;
+}
+
+.m-b28{
+    margin-bottom: 28px;
+}
+.m-b32{
+    margin-bottom: 32px;
+}
+.m-b36{
+    margin-bottom: 36px;
+}
+
+.m-r16{
+    margin-right: 16px;
+}
+.m-r20{
+    margin-right: 20px;
+}
+.m-r24{
+    margin-right: 24px;
+}
+
+
+.text-primary{
+    color: #00ffa3;
 }
 
 .d-flex{
@@ -201,80 +224,24 @@ img{
 }
 
 .flex-column{
-    flex-direction: row;
     flex-direction: column;
 }
 
-.align-items-center{
-    align-items: center;
-}
-
-.justify-content-between{
-    justify-content: space-between;
-}
 .justify-content-end{
     justify-content: end;
+}
+.justify-content-between{
+    justify-content: space-between;
 }
 
 .align-items-start{
     align-items: start;
 }
 
-.m-b12{
-    margin-bottom: 12px;
-}
-.m-b24{
-    margin-bottom: 24px;
-}
-
-.m-r24{
-    margin-right: 24px;
-}
-.m-b24{
-    margin-bottom: 24px;
-}
-.m-b32{
-    margin-bottom: 32px;
+.align-items-center{
+    align-items: center;
 }
 
 .gap{
     gap:24px;
-}
-
-.text-primary{
-    color: #00ffa3;
-}
-
-.am{
-    font-size: 64px;
-}
-
-.w5{
-    font-family: Bruno Ace SC;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: left;
-}
-
-.w6{
-    width: 636px;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.w7{
-    display: block;
-    color: white;
-    font-family: Bruno Ace SC;
-    font-size: 16px;
-    line-height: 24px;
-
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    text-align: center;
-}
-
-footer{
-    background: #000;
 }
